@@ -4,39 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yraeus</title>
-    <!-- Lien vers le fichier de styles principal -->
     <link rel="stylesheet" href="style.css">
-    <!-- Lien vers le fichier d'animations -->
-    <link rel="stylesheet" href="animations.css">
-    <!-- Importer la police Orbitron de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Bandes animées en fond -->
-    <div class="band"></div>
-    <div class="band"></div>
-    <div class="band"></div>
-    <div class="band"></div>
-    <div class="band"></div>
-    <div class="band"></div>
+    <!-- Conteneur des particules -->
+    <div id="particles-js"></div>
 
     <header>
         <h1 class="title">Yraeus</h1>
-        <p class="slogan">Yraeus, the boldness to imagine the infinite.</p>
+        <p class="slogan">The boldness to imagine the infinite.</p>
     </header>
 
-    <!-- Nouveau Menu déroulant -->
-    <nav>
-        <ul class="dropdown">
-            <li><a href="#">Menu</a>
-                <ul class="dropdown-content">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="price.html" class="price-link">Price</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <!-- Formes géométriques flottantes -->
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
 
     <main>
         <section>
@@ -48,5 +31,9 @@
     <footer>
         <p>© 2024 Yraeus. All rights reserved.</p>
     </footer>
+
+    <!-- Script Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-config.js"></script>
 </body>
 </html>
