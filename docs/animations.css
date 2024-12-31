@@ -4,6 +4,8 @@
     font-size: 10vw; /* Grande taille pour le titre */
     color: #6200ea; /* Couleur violette */
     animation: shrinkTitle 3s ease-in-out forwards; /* Animation d'agrandissement/rétrécissement */
+    position: relative; /* Assure que le titre reste devant les bandes */
+    z-index: 1; /* Garantit que le titre est devant les bandes */
 }
 
 /* Animation de rétrécissement du titre */
@@ -21,42 +23,19 @@ body {
     height: 100vh;
     overflow: hidden;  /* Pour éviter que les bandes débordent */
     background-color: white; /* Fond blanc */
-}
-
-/* Animation des bandes horizontales et diagonales */
-@keyframes moveLeftRight {
-    0% {
-        left: -100%;
-    }
-    50% {
-        left: 100%;
-    }
-    100% {
-        left: -100%;
-    }
-}
-
-@keyframes moveRightLeft {
-    0% {
-        right: -100%;
-    }
-    50% {
-        right: 100%;
-    }
-    100% {
-        right: -100%;
-    }
+    margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Style pour les bandes animées */
 .band {
     position: absolute;
-    height: 10px;
-    width: 100%;
-    background: linear-gradient(90deg, #6200ea, #3700b3, #000000); /* Dégradé des couleurs violettes, bleues et noires */
+    height: 10px; /* Épaisseur de la bande */
+    width: 100%; /* Largeur de la bande */
+    background: linear-gradient(90deg, rgba(98, 0, 234, 0.5), rgba(55, 0, 179, 0.5), rgba(0, 0, 0, 0.5)); /* Dégradé avec transparence */
     animation-duration: 15s; /* Durée de l'animation plus lente */
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    z-index: -1; /* Assure que les bandes sont derrière le contenu */
 }
 
 /* Positionnement et animation aléatoire des bandes */
@@ -88,4 +67,29 @@ body {
 .band:nth-child(6) {
     animation: moveRightLeft 20s infinite;
     top: 50%;
+}
+
+/* Animation des bandes horizontales */
+@keyframes moveLeftRight {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes moveRightLeft {
+    0% {
+        right: -100%;
+    }
+    50% {
+        right: 100%;
+    }
+    100% {
+        right: -100%;
+    }
 }
