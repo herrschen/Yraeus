@@ -1,9 +1,9 @@
 /* General page style */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;  /* Application de la police futuriste */
     margin: 0;
     padding: 0;
-    background-color: white; /* Fond blanc */
+    background-color: white;  /* Fond blanc */
     color: #333;
     height: 100vh;
     overflow: hidden;  /* Pour éviter que les bandes débordent */
@@ -15,21 +15,39 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    position: relative; /* Assurer la superposition par-dessus les bandes */
-    z-index: 2;
+    position: relative;
+    z-index: 10;  /* Assurez-vous que l'entête soit au-dessus des bandes */
+}
+
+/* Titre avec animation */
+h1 {
+    font-size: 10vw;  /* Titre en très grand */
+    animation: shrinkTitle 4s ease-in-out forwards;
+}
+
+/* Animation du titre */
+@keyframes shrinkTitle {
+    0% {
+        font-size: 10vw;
+        opacity: 1;
+    }
+    100% {
+        font-size: 3vw;  /* Taille finale du titre */
+        opacity: 1;
+    }
 }
 
 /* Slogan style */
 .slogan {
     font-style: italic;
     font-size: 18px;
+    animation: fadeIn 3s ease-in-out;
+    animation-delay: 1s;
 }
 
 /* Main content area */
 main {
     padding: 20px;
-    position: relative; /* Assurer la superposition par-dessus les bandes */
-    z-index: 2;
 }
 
 /* Footer style */
@@ -41,55 +59,54 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 2;
 }
 
-/* Création des bandes colorées */
+/* Bandes animées en fond */
 @keyframes moveLeftRight {
     0% {
-        left: -100%; /* Commence à gauche de l'écran */
+        left: -100%;
     }
     50% {
-        left: 100%; /* Va à droite de l'écran */
+        left: 100%;
     }
     100% {
-        left: -100%; /* Revient à gauche */
+        left: -100%;
     }
 }
 
 @keyframes moveTopBottom {
     0% {
-        top: -100%; /* Commence au-dessus de l'écran */
+        top: -100%;
     }
     50% {
-        top: 100%; /* Va vers le bas de l'écran */
+        top: 100%;
     }
     100% {
-        top: -100%; /* Revient au-dessus */
+        top: -100%;
     }
 }
 
 @keyframes moveBottomTop {
     0% {
-        top: 100%; /* Commence en bas de l'écran */
+        top: 100%;
     }
     50% {
-        top: -100%; /* Va vers le haut de l'écran */
+        top: -100%;
     }
     100% {
-        top: 100%; /* Revient en bas */
+        top: 100%;
     }
 }
 
 @keyframes moveRightLeft {
     0% {
-        right: -100%; /* Commence à droite de l'écran */
+        right: -100%;
     }
     50% {
-        right: 100%; /* Va à gauche de l'écran */
+        right: 100%;
     }
     100% {
-        right: -100%; /* Revient à droite */
+        right: -100%;
     }
 }
 
@@ -97,56 +114,53 @@ footer {
 .band {
     position: absolute;
     height: 15px;  /* Épaisseur de la bande */
-    width: 50%;   /* Largeur des bandes ajustée */
-    background: linear-gradient(45deg, rgba(98, 0, 234, 0.7), rgba(55, 0, 179, 0.7), rgba(0, 0, 0, 0.7)); /* Dégradé transparent */
-    animation-duration: 12s; /* Durée de l'animation plus longue (plus lent) */
+    width: 80%;   /* Largeur de la bande */
+    background: rgba(0, 0, 0, 0.5);  /* Couleur noire semi-transparente */
+    animation-duration: 8s; /* Durée de l'animation */
     animation-timing-function: linear;
-    animation-iteration-count: infinite; /* Pour que l'animation se répète */
-    z-index: 1; /* Assurer que les bandes soient derrière le contenu */
-    border-radius: 50%; /* Bordures arrondies pour un effet plus organique */
+    animation-iteration-count: infinite;
+    z-index: 1;  /* Assurer que les bandes soient derrière l'entête et le contenu */
 }
 
-/* Positionnement et animation aléatoire des bandes */
+/* Couleurs et animations des bandes */
 .band:nth-child(1) {
-    animation: moveLeftRight 12s infinite; /* Déplacement gauche à droite */
-    animation-delay: 0s;
+    background: rgba(98, 0, 234, 0.7);  /* Violet transparent */
+    animation: moveLeftRight 12s infinite;
     top: 20%;
 }
 
 .band:nth-child(2) {
-    animation: moveTopBottom 14s infinite; /* Déplacement haut en bas */
-    animation-delay: 1s;
+    background: rgba(0, 0, 0, 0.7);  /* Noir transparent */
+    animation: moveTopBottom 10s infinite;
     left: 10%;
 }
 
 .band:nth-child(3) {
-    animation: moveBottomTop 13s infinite; /* Déplacement bas en haut */
-    animation-delay: 2s;
+    background: rgba(38, 50, 56, 0.7);  /* Bleu transparent */
+    animation: moveBottomTop 12s infinite;
     left: 30%;
 }
 
 .band:nth-child(4) {
-    animation: moveRightLeft 12s infinite; /* Déplacement droite à gauche */
-    animation-delay: 3s;
+    background: rgba(98, 0, 234, 0.7);  /* Violet transparent */
+    animation: moveRightLeft 9s infinite;
     top: 50%;
 }
 
 .band:nth-child(5) {
-    animation: moveLeftRight 11s infinite; /* Déplacement gauche à droite */
-    animation-delay: 1s;
+    background: rgba(0, 0, 0, 0.7);  /* Noir transparent */
+    animation: moveLeftRight 10s infinite;
     top: 70%;
 }
 
 .band:nth-child(6) {
-    animation: moveTopBottom 12s infinite; /* Déplacement haut en bas */
-    animation-delay: 4s;
+    background: rgba(38, 50, 56, 0.7);  /* Bleu transparent */
+    animation: moveTopBottom 12s infinite;
     left: 60%;
 }
 
 .band:nth-child(7) {
-    animation: moveBottomTop 13s infinite; /* Déplacement bas en haut */
-    animation-delay: 2s;
+    background: rgba(98, 0, 234, 0.7);  /* Violet transparent */
+    animation: moveBottomTop 11s infinite;
     left: 80%;
 }
-
-/* Vous pouvez ajouter plus de bandes si nécessaire en suivant le même modèle */
