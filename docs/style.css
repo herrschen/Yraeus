@@ -13,24 +13,6 @@ header {
     padding: 40px 20px;
 }
 
-/* Police et animation du titre */
-.title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 10vw; /* Grande taille pour le titre */
-    color: #6200ea; /* Couleur violette */
-    animation: shrinkTitle 3s ease-in-out forwards; /* Animation d'agrandissement/rétrécissement */
-}
-
-/* Animation de rétrécissement du titre */
-@keyframes shrinkTitle {
-    0% {
-        font-size: 10vw; /* Initiale, très grande taille */
-    }
-    100% {
-        font-size: 3vw; /* Taille finale normale */
-    }
-}
-
 /* Slogan style */
 .slogan {
     font-style: italic;
@@ -109,78 +91,4 @@ nav ul li:hover .dropdown-content {
 
 .price-link:hover {
     color: #B88B00; /* Jaune moutarde plus foncé au survol */
-}
-
-/* Fond et animation des bandes colorées */
-body {
-    height: 100vh;
-    overflow: hidden;  /* Pour éviter que les bandes débordent */
-    background-color: white; /* Fond blanc */
-}
-
-/* Animation des bandes horizontales et diagonales */
-@keyframes moveLeftRight {
-    0% {
-        left: -100%;
-    }
-    50% {
-        left: 100%;
-    }
-    100% {
-        left: -100%;
-    }
-}
-
-@keyframes moveRightLeft {
-    0% {
-        right: -100%;
-    }
-    50% {
-        right: 100%;
-    }
-    100% {
-        right: -100%;
-    }
-}
-
-/* Style pour les bandes animées */
-.band {
-    position: absolute;
-    height: 10px;
-    width: 100%;
-    background: linear-gradient(90deg, #6200ea, #3700b3, #000000); /* Dégradé des couleurs violettes, bleues et noires */
-    animation-duration: 10s; /* Durée de l'animation plus lente */
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-/* Positionnement et animation aléatoire des bandes */
-.band:nth-child(1) {
-    animation: moveLeftRight 12s infinite;
-    top: 20%;
-}
-
-.band:nth-child(2) {
-    animation: moveRightLeft 10s infinite;
-    top: 40%;
-}
-
-.band:nth-child(3) {
-    animation: moveLeftRight 11s infinite;
-    top: 60%;
-}
-
-.band:nth-child(4) {
-    animation: moveRightLeft 9s infinite;
-    top: 80%;
-}
-
-.band:nth-child(5) {
-    animation: moveLeftRight 8s infinite;
-    top: 30%;
-}
-
-.band:nth-child(6) {
-    animation: moveRightLeft 10s infinite;
-    top: 50%;
 }
