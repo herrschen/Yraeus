@@ -111,3 +111,13 @@ h1 {
     animation: fadeIn 3s ease-in-out;
     animation-delay: 1s; /* Le slogan apparaît après 1 seconde */
 }
+
+/* Style pour l'onglet Price */
+.price-link {
+    background-color: yellow; /* Jaune pour l'onglet Price */
+    color: black; /* Texte noir pour contraster */
+}
+
+.price-link:hover {
+    background-color: #ffcc00; /* Changement de couleur au survol */
+}
