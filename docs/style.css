@@ -1,11 +1,113 @@
+/* General page style */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  text-align: center;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Header style */
+header {
+    background-color: #6200ea;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Slogan style */
+.slogan {
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+}
+
+/* Footer style */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Définir l'animation de fondu */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* L'élément est invisible au départ */
+    }
+    to {
+        opacity: 1; /* L'élément devient visible */
+    }
+}
+
+/* Appliquer l'animation de fondu sur le body */
+body {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Style pour le menu déroulant */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: #6200ea;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: #3700b3;
+}
+
+/* Style du sous-menu déroulant */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6200ea;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 10px;
+}
+
+.dropdown-content li a:hover {
+    background-color: #3700b3;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Animation de fondu pour le titre h1 */
 h1 {
-  color: #6200ea;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Optionnel : Animation de fondu pour le slogan */
+.slogan {
+    animation: fadeIn 3s ease-in-out;
+    animation-delay: 1s; /* Le slogan apparaît après 1 seconde */
 }
