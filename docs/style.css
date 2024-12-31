@@ -3,8 +3,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: black; /* Fond noir pour contraster les bandes */
     color: #333;
+    height: 100vh;
+    overflow: hidden;  /* Pour éviter que les bandes débordent */
 }
 
 /* Header style */
@@ -13,6 +15,8 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative; /* Assurer la superposition par-dessus les bandes */
+    z-index: 2;
 }
 
 /* Slogan style */
@@ -24,6 +28,8 @@ header {
 /* Main content area */
 main {
     padding: 20px;
+    position: relative; /* Assurer la superposition par-dessus les bandes */
+    z-index: 2;
 }
 
 /* Footer style */
@@ -35,6 +41,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 2;
 }
 
 /* Définir l'animation de fondu */
@@ -121,15 +128,6 @@ h1 {
     color: #B88B00; /* Jaune moutarde plus foncé au survol */
 }
 
-/* Style général de la page */
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;  /* Pour éviter que les bandes débordent */
-    background-color: black; /* Fond noir pour contraster les bandes */
-}
-
 /* Création des bandes colorées */
 @keyframes moveLeftRight {
     0% {
@@ -188,6 +186,7 @@ body {
     animation-duration: 5s; /* Durée de l'animation */
     animation-timing-function: linear;
     animation-iteration-count: infinite; /* Pour que l'animation se répète */
+    z-index: 1; /* Assurer que les bandes soient derrière le contenu */
 }
 
 /* Positionnement et animation aléatoire des bandes */
@@ -232,5 +231,3 @@ body {
     animation-delay: 2s;
     left: 80%;
 }
-
-/* Plus de bandes peuvent être ajoutées de manière similaire */
