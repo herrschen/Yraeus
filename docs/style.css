@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black; /* Fond noir pour contraster les bandes */
+    background-color: white; /* Fond blanc */
     color: #333;
     height: 100vh;
     overflow: hidden;  /* Pour éviter que les bandes débordent */
@@ -180,54 +180,57 @@ h1 {
 /* Style pour les bandes animées */
 .band {
     position: absolute;
-    height: 10px;  /* Épaisseur de la bande */
-    width: 100%;   /* Largeur de la bande */
-    background: linear-gradient(90deg, #6200ea, #3700b3, #000000); /* Dégradé des couleurs violettes, bleues et noires */
-    animation-duration: 5s; /* Durée de l'animation */
+    height: 15px;  /* Épaisseur de la bande */
+    width: 50%;   /* Largeur des bandes ajustée */
+    background: linear-gradient(45deg, rgba(98, 0, 234, 0.7), rgba(55, 0, 179, 0.7), rgba(0, 0, 0, 0.7)); /* Dégradé transparent */
+    animation-duration: 12s; /* Durée de l'animation plus longue (plus lent) */
     animation-timing-function: linear;
     animation-iteration-count: infinite; /* Pour que l'animation se répète */
     z-index: 1; /* Assurer que les bandes soient derrière le contenu */
+    border-radius: 50%; /* Bordures arrondies pour un effet plus organique */
 }
 
 /* Positionnement et animation aléatoire des bandes */
 .band:nth-child(1) {
-    animation: moveLeftRight 6s infinite; /* Déplacement gauche à droite */
+    animation: moveLeftRight 12s infinite; /* Déplacement gauche à droite */
     animation-delay: 0s;
     top: 20%;
 }
 
 .band:nth-child(2) {
-    animation: moveTopBottom 8s infinite; /* Déplacement haut en bas */
+    animation: moveTopBottom 14s infinite; /* Déplacement haut en bas */
     animation-delay: 1s;
-    left: 20%;
+    left: 10%;
 }
 
 .band:nth-child(3) {
-    animation: moveBottomTop 7s infinite; /* Déplacement bas en haut */
+    animation: moveBottomTop 13s infinite; /* Déplacement bas en haut */
     animation-delay: 2s;
-    left: 40%;
+    left: 30%;
 }
 
 .band:nth-child(4) {
-    animation: moveRightLeft 6s infinite; /* Déplacement droite à gauche */
+    animation: moveRightLeft 12s infinite; /* Déplacement droite à gauche */
     animation-delay: 3s;
     top: 50%;
 }
 
 .band:nth-child(5) {
-    animation: moveLeftRight 5s infinite; /* Déplacement gauche à droite */
+    animation: moveLeftRight 11s infinite; /* Déplacement gauche à droite */
     animation-delay: 1s;
     top: 70%;
 }
 
 .band:nth-child(6) {
-    animation: moveTopBottom 6s infinite; /* Déplacement haut en bas */
+    animation: moveTopBottom 12s infinite; /* Déplacement haut en bas */
     animation-delay: 4s;
     left: 60%;
 }
 
 .band:nth-child(7) {
-    animation: moveBottomTop 7s infinite; /* Déplacement bas en haut */
+    animation: moveBottomTop 13s infinite; /* Déplacement bas en haut */
     animation-delay: 2s;
     left: 80%;
 }
+
+/* Vous pouvez ajouter plus de bandes si nécessaire en suivant le même modèle */
