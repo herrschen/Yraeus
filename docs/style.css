@@ -3,8 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white; /* Fond blanc */
     color: #333;
+
+    /* Dégradé fluide comme fond */
+    background: linear-gradient(-45deg, #6200ea, #3700b3, #000000, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
 }
 
 /* Header style */
@@ -91,4 +95,42 @@ nav ul li:hover .dropdown-content {
 
 .price-link:hover {
     color: #B88B00; /* Jaune moutarde plus foncé au survol */
+}
+
+/* Animation pour le dégradé */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Particules et formes géométriques */
+.shape {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(98, 0, 234, 0.3);
+    animation: float 10s infinite ease-in-out;
+    border-radius: 50%;
+    top: calc(100% * var(--random-y));
+    left: calc(100% * var(--random-x));
+}
+
+/* Animation des formes flottantes */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
