@@ -1,39 +1,33 @@
 /* General page style */
 body {
-    font-family: 'Orbitron', sans-serif;  /* Application de la police futuriste */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;  /* Fond blanc */
+    background-color: white; /* Fond blanc */
     color: #333;
-    height: 100vh;
-    overflow: hidden;  /* Pour éviter que les bandes débordent */
 }
 
 /* Header style */
 header {
-    background-color: #6200ea;
-    color: white;
-    padding: 20px;
     text-align: center;
-    position: relative;
-    z-index: 10;  /* Assurez-vous que l'entête soit au-dessus des bandes */
+    padding: 40px 20px;
 }
 
-/* Titre avec animation */
-h1 {
-    font-size: 10vw;  /* Titre en très grand */
-    animation: shrinkTitle 4s ease-in-out forwards;
+/* Police et animation du titre */
+.title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10vw; /* Grande taille pour le titre */
+    color: #6200ea; /* Couleur violette */
+    animation: shrinkTitle 3s ease-in-out forwards; /* Animation d'agrandissement/rétrécissement */
 }
 
-/* Animation du titre */
+/* Animation de rétrécissement du titre */
 @keyframes shrinkTitle {
     0% {
-        font-size: 10vw;
-        opacity: 1;
+        font-size: 10vw; /* Initiale, très grande taille */
     }
     100% {
-        font-size: 3vw;  /* Taille finale du titre */
-        opacity: 1;
+        font-size: 3vw; /* Taille finale normale */
     }
 }
 
@@ -41,8 +35,6 @@ h1 {
 .slogan {
     font-style: italic;
     font-size: 18px;
-    animation: fadeIn 3s ease-in-out;
-    animation-delay: 1s;
 }
 
 /* Main content area */
@@ -61,7 +53,72 @@ footer {
     width: 100%;
 }
 
-/* Bandes animées en fond */
+/* Menu déroulant */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: #6200ea;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: #3700b3;
+}
+
+/* Style du sous-menu déroulant */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6200ea;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 10px;
+}
+
+.dropdown-content li a:hover {
+    background-color: #3700b3;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Style pour l'onglet Price */
+.price-link {
+    color: #D4AF37; /* Jaune moutarde pour le texte */
+}
+
+.price-link:hover {
+    color: #B88B00; /* Jaune moutarde plus foncé au survol */
+}
+
+/* Fond et animation des bandes colorées */
+body {
+    height: 100vh;
+    overflow: hidden;  /* Pour éviter que les bandes débordent */
+    background-color: white; /* Fond blanc */
+}
+
+/* Animation des bandes horizontales et diagonales */
 @keyframes moveLeftRight {
     0% {
         left: -100%;
@@ -71,30 +128,6 @@ footer {
     }
     100% {
         left: -100%;
-    }
-}
-
-@keyframes moveTopBottom {
-    0% {
-        top: -100%;
-    }
-    50% {
-        top: 100%;
-    }
-    100% {
-        top: -100%;
-    }
-}
-
-@keyframes moveBottomTop {
-    0% {
-        top: 100%;
-    }
-    50% {
-        top: -100%;
-    }
-    100% {
-        top: 100%;
     }
 }
 
@@ -113,54 +146,41 @@ footer {
 /* Style pour les bandes animées */
 .band {
     position: absolute;
-    height: 15px;  /* Épaisseur de la bande */
-    width: 80%;   /* Largeur de la bande */
-    background: rgba(0, 0, 0, 0.5);  /* Couleur noire semi-transparente */
-    animation-duration: 8s; /* Durée de l'animation */
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(90deg, #6200ea, #3700b3, #000000); /* Dégradé des couleurs violettes, bleues et noires */
+    animation-duration: 10s; /* Durée de l'animation plus lente */
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    z-index: 1;  /* Assurer que les bandes soient derrière l'entête et le contenu */
 }
 
-/* Couleurs et animations des bandes */
+/* Positionnement et animation aléatoire des bandes */
 .band:nth-child(1) {
-    background: rgba(98, 0, 234, 0.7);  /* Violet transparent */
     animation: moveLeftRight 12s infinite;
     top: 20%;
 }
 
 .band:nth-child(2) {
-    background: rgba(0, 0, 0, 0.7);  /* Noir transparent */
-    animation: moveTopBottom 10s infinite;
-    left: 10%;
+    animation: moveRightLeft 10s infinite;
+    top: 40%;
 }
 
 .band:nth-child(3) {
-    background: rgba(38, 50, 56, 0.7);  /* Bleu transparent */
-    animation: moveBottomTop 12s infinite;
-    left: 30%;
+    animation: moveLeftRight 11s infinite;
+    top: 60%;
 }
 
 .band:nth-child(4) {
-    background: rgba(98, 0, 234, 0.7);  /* Violet transparent */
     animation: moveRightLeft 9s infinite;
-    top: 50%;
+    top: 80%;
 }
 
 .band:nth-child(5) {
-    background: rgba(0, 0, 0, 0.7);  /* Noir transparent */
-    animation: moveLeftRight 10s infinite;
-    top: 70%;
+    animation: moveLeftRight 8s infinite;
+    top: 30%;
 }
 
 .band:nth-child(6) {
-    background: rgba(38, 50, 56, 0.7);  /* Bleu transparent */
-    animation: moveTopBottom 12s infinite;
-    left: 60%;
-}
-
-.band:nth-child(7) {
-    background: rgba(98, 0, 234, 0.7);  /* Violet transparent */
-    animation: moveBottomTop 11s infinite;
-    left: 80%;
+    animation: moveRightLeft 10s infinite;
+    top: 50%;
 }
