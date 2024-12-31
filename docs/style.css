@@ -114,10 +114,10 @@ h1 {
 
 /* Style pour l'onglet Price */
 .price-link {
-    background-color: yellow; /* Jaune pour l'onglet Price */
-    color: black; /* Texte noir pour contraster */
+    color: #D4AF37; /* Jaune moutarde pour le texte */
 }
 
 .price-link:hover {
-    background-color: #ffcc00; /* Changement de couleur au survol */
+    color: #B88B00; /* Jaune moutarde plus foncé au survol */
 }
+
