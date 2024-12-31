@@ -17,6 +17,24 @@ header {
     padding: 40px 20px;
 }
 
+/* Titre stylé */
+.title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10vw;
+    color: #ffffff;
+    animation: shrinkTitle 3s ease-in-out forwards;
+}
+
+/* Animation de rétrécissement du titre */
+@keyframes shrinkTitle {
+    0% {
+        font-size: 10vw;
+    }
+    100% {
+        font-size: 3vw;
+    }
+}
+
 /* Slogan style */
 .slogan {
     font-style: italic;
