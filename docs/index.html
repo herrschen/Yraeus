@@ -18,9 +18,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Contenu de ton site -->
-</body>
-</html>
+    <!-- Menu de navigation -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="prices.html">Our Prices</a>
+    </nav>
 
     <!-- Conteneur des particules -->
     <div id="particles-js"></div>
@@ -68,12 +72,9 @@
 
     <!-- JavaScript pour le défilement fluide -->
     <script>
-        // Sélectionner tous les liens qui pointent vers des ancres
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();  // Empêche le comportement par défaut (scroll instantané)
-
-                // Scroll fluide vers la cible
+                e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
