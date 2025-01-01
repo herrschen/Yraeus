@@ -138,40 +138,6 @@ nav ul li:hover .dropdown-content {
     display: block;
 }
 
-/* Navigation flottante */
-.floating-nav {
-    position: fixed;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    z-index: 1000;
-}
-
-.floating-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.floating-nav li {
-    margin-bottom: 10px;
-}
-
-.floating-nav a {
-    display: block;
-    padding: 10px;
-    background: #6200ea;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.floating-nav a:hover {
-    background: #3700b3;
-}
-
 /* Animation pour le dégradé */
 @keyframes gradientShift {
     0% {
