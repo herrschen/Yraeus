@@ -38,19 +38,19 @@
     <main>
         <section class="carousel">
             <div class="carousel-item" id="carousel-item-1">
-                <h2 class="carousel-title">Welcome to Yraeus</h2>
+                <h2 class="carousel-title typing" data-title="Welcome to Yraeus"> </h2>
                 <p class="carousel-text">At Yraeus, we believe in the <span class="highlight">magic</span> and <span class="highlight">power</span> of words ✨💪. Through our carefully crafted poems, fables, and stories, we aim to bring joy, reflection, and inspiration to people worldwide 🌍📚. Discover the beauty of words and let them work their magic in your life.</p>
             </div>
             <div class="carousel-item" id="carousel-item-2">
-                <h2 class="carousel-title">Our Mission</h2>
+                <h2 class="carousel-title typing" data-title="Our Mission"> </h2>
                 <p class="carousel-text">Founded in 2020, Yraeus has dedicated itself to producing unique and compelling content. Our creations are for those who seek more than entertainment; they are for those who want to be transported to different realms, who desire depth and creativity in every word.</p>
             </div>
             <div class="carousel-item" id="carousel-item-3">
-                <h2 class="carousel-title">Why We Do This</h2>
+                <h2 class="carousel-title typing" data-title="Why We Do This"> </h2>
                 <p class="carousel-text">We’re passionate about the endless possibilities of storytelling. For us, every story has the potential to change perspectives, challenge assumptions, and touch lives. We believe that great stories are powerful agents of change, capable of inspiring action and shaping the future.</p>
             </div>
             <div class="carousel-item" id="carousel-item-4">
-                <h2 class="carousel-title">Join Us</h2>
+                <h2 class="carousel-title typing" data-title="Join Us"> </h2>
                 <p class="carousel-text">At Yraeus, we don’t just create stories; we create experiences. We are a group of French students who, since 2020, have dedicated ourselves to unleashing our limitless imagination and putting it at your service. Our work is a blend of youthful energy, passion, and a relentless drive to create unique literary works. Every piece we produce is the result of intense collaboration and a deep commitment to making every word count.</p>
             </div>
         </section>
@@ -112,26 +112,36 @@
     });
 </script>
 
-    <!-- JavaScript pour le carrousel automatique -->
+    <!-- JavaScript pour l'animation des titres (effet de frappe) -->
     <script>
         let currentIndex = 0;
-        const items = document.querySelectorAll('.carousel-item');
-        
-        function showNextItem() {
-            // Cache l'élément actuel
-            items[currentIndex].classList.remove('active');
-            
-            // Passe à l'élément suivant
-            currentIndex = (currentIndex + 1) % items.length;
-            
-            // Affiche le nouvel élément
-            items[currentIndex].classList.add('active');
+        const titles = document.querySelectorAll('.carousel-title');
+
+        function typeEffect(element, text, index) {
+            let i = 0;
+            let interval = setInterval(() => {
+                element.textContent += text.charAt(i);
+                i++;
+                if (i === text.length) {
+                    clearInterval(interval);
+                    if (index < titles.length - 1) {
+                        setTimeout(() => {
+                            showNextItem(index + 1);
+                        }, 1000);
+                    }
+                }
+            }, 100);
         }
 
-        // Affiche le premier élément au chargement
+        function showNextItem(index) {
+            const titleElement = titles[index];
+            const text = titleElement.getAttribute('data-title');
+            titleElement.textContent = '';
+            typeEffect(titleElement, text, index);
+        }
+
         window.onload = function() {
-            items[currentIndex].classList.add('active');
-            setInterval(showNextItem, 5000); // Change l'élément toutes les 5 secondes
+            showNextItem(currentIndex); // Affiche le premier titre
         };
     </script>
 
