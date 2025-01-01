@@ -307,3 +307,49 @@ body.dark-theme .page {
         padding: 10px;
     }
 }
+
+/* Styles généraux pour les titres */
+.carousel-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #fff; /* Couleur blanche */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-text {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #6200ea; /* Violet clair pour les mots 'magic' et 'power' */
+    font-weight: bold;
+}
+
+/* Pour les pages déroulantes */
+.page-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.page-text {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Slogan */
+.slogan {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #ff4081; /* Couleur rose pour le slogan */
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
