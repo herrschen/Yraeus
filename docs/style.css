@@ -175,3 +175,9 @@ nav ul li:hover .dropdown-content {
         transform: translateY(0);
     }
 }
+
+/* Effet de survol pour agrandir les sections */
+#page1:hover, #page2:hover, #page3:hover, #page4:hover {
+    transform: scale(1.02); /* Agrandir légèrement */
+    transition: transform 0.3s ease-in-out; /* Transition fluide */
+}
