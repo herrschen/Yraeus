@@ -49,5 +49,20 @@
     <!-- Script Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="particles-config.js"></script>
+
+    <!-- JavaScript pour le défilement fluide -->
+    <script>
+        // Sélectionner tous les liens qui pointent vers des ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();  // Empêche le comportement par défaut (scroll instantané)
+
+                // Scroll fluide vers la cible
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
