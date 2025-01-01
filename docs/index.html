@@ -4,10 +4,10 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WRK3MQ8E"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F0WRK3MQ8E');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F0WRK3MQ8E');
     </script>
 
     <meta charset="UTF-8">
@@ -43,19 +43,19 @@
     <main>
         <section class="carousel">
             <div class="carousel-item" id="carousel-item-1">
-                <h2 class="carousel-title typing" data-title="Welcome to Yraeus"> </h2>
+                <h2 class="carousel-title typing" data-title="Welcome to Yraeus"></h2>
                 <p class="carousel-text typing">At Yraeus, we believe in the <span class="highlight">magic</span> and <span class="highlight">power</span> of words ✨💪. Through our carefully crafted poems, fables, and stories, we aim to bring joy, reflection, and inspiration to people worldwide 🌍📚. Discover the beauty of words and let them work their magic in your life.</p>
             </div>
             <div class="carousel-item" id="carousel-item-2">
-                <h2 class="carousel-title typing" data-title="Our Mission"> </h2>
+                <h2 class="carousel-title typing" data-title="Our Mission"></h2>
                 <p class="carousel-text typing">Founded in 2020, Yraeus has dedicated itself to producing unique and compelling content. Our creations are for those who seek more than entertainment; they are for those who want to be transported to different realms, who desire depth and creativity in every word.</p>
             </div>
             <div class="carousel-item" id="carousel-item-3">
-                <h2 class="carousel-title typing" data-title="Why We Do This"> </h2>
+                <h2 class="carousel-title typing" data-title="Why We Do This"></h2>
                 <p class="carousel-text typing">We’re passionate about the endless possibilities of storytelling. For us, every story has the potential to change perspectives, challenge assumptions, and touch lives. We believe that great stories are powerful agents of change, capable of inspiring action and shaping the future.</p>
             </div>
             <div class="carousel-item" id="carousel-item-4">
-                <h2 class="carousel-title typing" data-title="Join Us"> </h2>
+                <h2 class="carousel-title typing" data-title="Join Us"></h2>
                 <p class="carousel-text typing">At Yraeus, we don’t just create stories; we create experiences. We are a group of French students who, since 2020, have dedicated ourselves to unleashing our limitless imagination and putting it at your service. Our work is a blend of youthful energy, passion, and a relentless drive to create unique literary works. Every piece we produce is the result of intense collaboration and a deep commitment to making every word count.</p>
             </div>
         </section>
@@ -96,26 +96,26 @@
     </script>
     
     <script>
-    const themeToggle = document.getElementById('theme-toggle');
+        const themeToggle = document.getElementById('theme-toggle');
 
-    // Vérifier le thème préféré de l'utilisateur
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-theme');
-        themeToggle.textContent = '🌞'; // Changer l'icône du bouton pour le mode clair
-    }
-
-    // Action lors du clic sur le bouton
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        if (document.body.classList.contains('dark-theme')) {
-            localStorage.setItem('theme', 'dark');
+        // Vérifier le thème préféré de l'utilisateur
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
             themeToggle.textContent = '🌞'; // Changer l'icône du bouton pour le mode clair
-        } else {
-            localStorage.removeItem('theme');
-            themeToggle.textContent = '🌙'; // Changer l'icône du bouton pour le mode sombre
         }
-    });
-</script>
+
+        // Action lors du clic sur le bouton
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.textContent = '🌞'; // Changer l'icône du bouton pour le mode clair
+            } else {
+                localStorage.removeItem('theme');
+                themeToggle.textContent = '🌙'; // Changer l'icône du bouton pour le mode sombre
+            }
+        });
+    </script>
 
     <!-- JavaScript pour l'animation des titres (effet de frappe) -->
     <script>
