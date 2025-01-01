@@ -46,6 +46,38 @@ main {
     padding: 20px;
 }
 
+/* Sections déroulantes */
+.page {
+    min-height: 100vh; /* Chaque section occupe la totalité de la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background: rgba(55, 0, 179, 0.8); /* Fond semi-transparent */
+    margin: 0;
+    padding: 40px;
+}
+
+/* Couleurs alternées pour les pages */
+#page1 {
+    background: rgba(98, 0, 234, 0.9);
+}
+
+#page2 {
+    background: rgba(55, 0, 179, 0.8);
+}
+
+#page3 {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#page4 {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
 /* Footer style */
 footer {
     background-color: #333;
@@ -106,13 +138,38 @@ nav ul li:hover .dropdown-content {
     display: block;
 }
 
-/* Style pour l'onglet Price */
-.price-link {
-    color: #D4AF37; /* Jaune moutarde pour le texte */
+/* Navigation flottante */
+.floating-nav {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 
-.price-link:hover {
-    color: #B88B00; /* Jaune moutarde plus foncé au survol */
+.floating-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.floating-nav li {
+    margin-bottom: 10px;
+}
+
+.floating-nav a {
+    display: block;
+    padding: 10px;
+    background: #6200ea;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.floating-nav a:hover {
+    background: #3700b3;
 }
 
 /* Animation pour le dégradé */
