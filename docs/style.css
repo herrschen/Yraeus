@@ -334,11 +334,11 @@ body.dark-theme .page {
     }
 
     .shape {
-        width: 40px; /* Encore plus petit pour les smartphones */
+        width: 40px; /* Encore plus petit pour les très petits écrans */
         height: 40px;
     }
 
-    .page {
-        padding: 10px;
+    footer {
+        font-size: 12px; /* Réduit la taille du texte dans le footer */
     }
 }
