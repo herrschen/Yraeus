@@ -1,4 +1,4 @@
-/* General page style */
+/* Style général de la page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -35,15 +35,50 @@ header {
     }
 }
 
-/* Slogan style */
+/* Carrousel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
+.carousel-item {
+    flex: 1;
+    padding: 20px;
+    opacity: 0;
+    animation: carouselAnimation 12s infinite ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #fff; /* Couleur blanche */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-text {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+@keyframes carouselAnimation {
+    0%, 20% {
+        opacity: 1;
+    }
+    25%, 95% {
+        opacity: 0;
+    }
+}
+
+/* Slogan */
 .slogan {
     font-style: italic;
     font-size: 18px;
-}
-
-/* Main content area */
-main {
-    padding: 20px;
 }
 
 /* Sections déroulantes */
@@ -306,50 +341,4 @@ body.dark-theme .page {
     .page {
         padding: 10px;
     }
-}
-
-/* Styles généraux pour les titres */
-.carousel-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    color: #fff; /* Couleur blanche */
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.carousel-text {
-    font-size: 1.1rem;
-    color: #f1f1f1;
-    line-height: 1.6;
-}
-
-.highlight {
-    color: #6200ea; /* Violet clair pour les mots 'magic' et 'power' */
-    font-weight: bold;
-}
-
-/* Pour les pages déroulantes */
-.page-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    color: #ffffff;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.page-text {
-    font-size: 1.1rem;
-    color: #f1f1f1;
-    line-height: 1.6;
-}
-
-/* Slogan */
-.slogan {
-    font-style: italic;
-    font-size: 1.5rem;
-    color: #ff4081; /* Couleur rose pour le slogan */
-    font-weight: 300;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
