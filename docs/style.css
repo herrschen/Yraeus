@@ -181,3 +181,25 @@ nav ul li:hover .dropdown-content {
     transform: scale(1.02); /* Agrandir légèrement */
     transition: transform 0.3s ease-in-out; /* Transition fluide */
 }
+
+/* Effet de survol pour les titres des sections */
+h2 {
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+/* Lorsque l'utilisateur survole le titre */
+h2:hover {
+    color: #6200ea; /* Changement de couleur du titre */
+    transform: scale(1.1); /* Zoom sur le titre */
+}
+
+/* Effet de survol sur les sections */
+.page {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Lorsque l'utilisateur survole une section */
+.page:hover {
+    transform: scale(1.02); /* Zoom léger sur la section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet de profondeur */
+}
