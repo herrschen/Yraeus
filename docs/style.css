@@ -367,7 +367,7 @@ body.dark-theme .page {
 }
 
 .highlight {
-    color: #6200ea; /* Violet clair pour les mots 'magic' et 'power' */
+    color: #ff4081; /* Couleur rose pour les mots 'magic' et 'power' */
     font-weight: bold;
 }
 
