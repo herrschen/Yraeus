@@ -117,3 +117,47 @@ body {
         background-position: 0% 50%;
     }
 }
+
+/* Animation de la machine à écrire pour le titre */
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Effet de curseur clignotant */
+.typewriter-effect::after {
+    content: '|';
+    animation: blink 0.8s infinite step-start;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Animation d’apparition fluide des éléments */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Application de l'animation de fadeIn aux éléments au chargement */
+.preview-box, .cta-buttons, .cta-btn {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animation de survol pour les boutons */
+.cta-btn:hover {
+    background-color: #3700b3;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
