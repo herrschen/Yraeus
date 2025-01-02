@@ -75,9 +75,10 @@ main {
     align-items: center;
     color: #fff;
     text-align: center;
-    background: rgba(55, 0, 179, 0.8); /* Fond semi-transparent */
+    background: rgba(55, 0, 179, 1); /* Fond solide pour éviter le conflit */
     margin: 0;
     padding: 40px;
+    overflow: hidden; /* Ajouter overflow: hidden pour éviter les débordements */
 }
 
 /* Couleurs alternées pour les pages */
@@ -86,7 +87,7 @@ main {
 }
 
 #page2 {
-    background: rgba(55, 0, 179, 0.8);
+    background: rgba(55, 0, 179, 1); /* Fond solide */
 }
 
 #page3 {
@@ -409,37 +410,8 @@ body.dark-theme .page {
     line-height: 1.6;
 }
 
-/* Slogan */
-.slogan {
-    font-style: italic;
-    font-size: 1.5rem;
-    color: #ff4081; /* Couleur rose pour le slogan */
-    font-weight: 300;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    animation: gradientColorChange 5s ease-in-out infinite; /* Animation ajoutée */
-}
-
-/* Appliquez ce style à l'élément contenant le texte */
-.animated-text {
-    font-size: 2.5rem;
-    font-weight: bold;
-    background: linear-gradient(45deg, #ff6a00, #ee0979, #ff6a00, #ee0979);
-    background-size: 400% 400%;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: gradientAnimation 5s ease infinite;
-}
-
-/* Définition de l'animation */
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+/* Animation de la page */
+.page:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
