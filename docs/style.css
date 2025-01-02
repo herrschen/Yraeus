@@ -200,6 +200,8 @@ nav ul li:hover .dropdown-content {
     border-radius: 50%;
     top: calc(100% * var(--random-y));
     left: calc(100% * var(--random-x));
+    z-index: -1; /* Placer les formes derrière le contenu */
+    pointer-events: none; /* Empêche les formes d'interférer avec les interactions */
 }
 
 /* Animation des formes flottantes */
