@@ -19,7 +19,7 @@
 /* Fond et animation des bandes colorées */
 body {
     height: 100vh;
-    overflow: hidden; /* Pour éviter que les bandes débordent */
+    overflow: auto; /* Permettre le défilement vertical */
     background-color: white; /* Fond blanc */
 }
 
