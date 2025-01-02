@@ -230,3 +230,10 @@ body {
     position: relative;
     animation: highlight 3s ease-in-out infinite;
 }
+
+/* Centrer le texte et ajouter de l'espace par rapport au titre */
+.centered-text {
+    text-align: center;
+    margin-top: 20px; /* Ajouter de l'espace par rapport au titre */
+    margin-bottom: 20px; /* Ajouter de l'espace en bas si nécessaire */
+}
