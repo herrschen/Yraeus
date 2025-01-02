@@ -58,6 +58,7 @@ body {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     opacity: 0.6; /* Réduction globale de l'opacité */
+    pointer-events: none; /* Empêche les bandes de bloquer l'interaction avec la souris */
 }
 
 /* Positionnement et animation aléatoire des bandes */
