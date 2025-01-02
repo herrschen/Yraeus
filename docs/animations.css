@@ -162,3 +162,71 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+
+/* Animations stylisées pour les titres du carrousel */
+.animated-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+/* Animation de glissement latéral */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.slide-in {
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+/* Animation de zoom avant */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.zoom-in {
+    animation: zoomIn 2s ease-in-out forwards;
+}
+
+/* Animation de rotation */
+@keyframes rotateIn {
+    0% {
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+.rotate-in {
+    animation: rotateIn 2s ease-in-out forwards;
+}
+
+/* Animation de surbrillance */
+@keyframes highlight {
+    0% {
+        background-color: #fff2;
+    }
+    50% {
+        background-color: #6200ea;
+    }
+    100% {
+        background-color: #fff2;
+    }
+}
+.highlight {
+    position: relative;
+    animation: highlight 3s ease-in-out infinite;
+}
