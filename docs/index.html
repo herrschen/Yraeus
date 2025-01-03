@@ -73,5 +73,33 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const titles = document.querySelectorAll('.title');
+            const sections = document.querySelectorAll('.section');
+            const quotes = document.querySelectorAll('.quote');
+            const pages = document.querySelectorAll('.page-transition');
+
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            titles.forEach(title => observer.observe(title));
+            sections.forEach(section => observer.observe(section));
+            quotes.forEach(quote => observer.observe(quote));
+            pages.forEach(page => observer.observe(page));
+        });
+    </script>
 </body>
 </html>
