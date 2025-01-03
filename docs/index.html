@@ -1,131 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WRK3MQ8E"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F0WRK3MQ8E');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yraeus</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="animations.css"> <!-- Lien vers animations.css -->
+    <meta name="description" content="Explore a universe of books, stories, fables, and quotes brought to life with elegant design and engaging animations.">
+    <title>Yraeus - Stories Redefined</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Menu de navigation -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact us.html">Contact Us</a>
-        <a href="prices.html">Our Prices</a>
+        <div class="logo">Yraeus</div>
+        <ul class="nav-links">
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#fables">Fables</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+        <button class="theme-toggle">🌙</button>
     </nav>
 
-    <!-- Conteneur des particules -->
-    <div id="particles-js" style="pointer-events: none;"></div> <!-- Empêche les particules d'interférer avec le curseur -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Immerse Yourself in Imagination</h1>
+            <p>Discover a curated collection of timeless stories, fables, and quotes crafted for dreamers and thinkers alike.</p>
+            <a href="#explore" class="cta-button">Explore Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-books.png" alt="Stack of magical books">
+        </div>
+    </section>
 
-    <header>
-        <!-- Titre animé -->
-        <h1 class="title">Yraeus</h1>
-        <p class="slogan">The boldness to imagine the infinite.</p>
-        <button id="theme-toggle" class="theme-toggle">🌙</button>
-    </header>
+    <!-- Feature Section -->
+    <section class="feature-section">
+        <div class="feature">
+            <h2>Stories That Inspire</h2>
+            <p>Dive into tales of adventure, romance, and mystery crafted to ignite your imagination.</p>
+            <img src="images/stories.png" alt="Illustration of a storybook unfolding into a fantasy world">
+        </div>
+        <div class="feature">
+            <h2>Fables with Wisdom</h2>
+            <p>Learn life lessons through beautifully narrated fables and allegories.</p>
+            <img src="images/fables.png" alt="A whimsical scene with animals from fables">
+        </div>
+        <div class="feature">
+            <h2>Quotes to Reflect</h2>
+            <p>Discover profound quotes from the greatest minds, inspiring your journey through life.</p>
+            <img src="images/quotes.png" alt="Quotes on parchment paper with a quill pen">
+        </div>
+    </section>
 
-    <!-- Carrousel Description -->
-    <main>
-        <section class="carousel">
-            <div class="carousel-item">
-                <h2 class="carousel-title animated-title slide-in">Discover Yraeus</h2> <!-- Animation stylisée -->
-                <p class="carousel-text centered-text">At Yraeus, we believe in the <span class="highlight">magic</span> and <span class="highlight">power</span> of words ✨💪. Through our carefully crafted poems, fables, and stories, we aim to bring joy, reflection, and inspiration to people worldwide 🌍📚. Discover the beauty of words and let them work their magic in your life.</p>
-            </div>
-            <div class="carousel-item">
-                <h2 class="carousel-title animated-title zoom-in">Our Purpose</h2> <!-- Animation stylisée -->
-                <p class="carousel-text centered-text">Founded in 2020, Yraeus has dedicated itself to producing unique and compelling content. Our creations are for those who seek more than entertainment; they are for those who want to be transported to different realms, who desire depth and creativity in every word.</p>
-            </div>
-            <div class="carousel-item">
-                <h2 class="carousel-title animated-title rotate-in">Our Passion</h2> <!-- Animation stylisée -->
-                <p class="carousel-text centered-text">We’re passionate about the endless possibilities of storytelling. For us, every story has the potential to change perspectives, challenge assumptions, and touch lives. We believe that great stories are powerful agents of change, capable of inspiring action and shaping the future.</p>
-            </div>
-            <div class="carousel-item">
-                <h2 class="carousel-title animated-title highlight">Join Our Journey</h2> <!-- Animation stylisée -->
-                <p class="carousel-text centered-text">At Yraeus, we don’t just create stories; we create experiences. We are a group of French students who, since 2020, have dedicated ourselves to unleashing our limitless imagination and putting it at your service. Our work is a blend of youthful energy, passion, and a relentless drive to create unique literary works. Every piece we produce is the result of intense collaboration and a deep commitment to making every word count.</p>
-            </div>
-        </section>
+    <!-- Highlight Section -->
+    <section class="highlight">
+        <h2>Explore New Horizons</h2>
+        <p>With Yraeus, the magic of storytelling comes alive. Find stories for every mood and every moment.</p>
+        <img src="images/highlight.png" alt="A reader lost in a glowing world of books">
+    </section>
 
-        <!-- Aperçu interactif -->
-        <section class="preview-section">
-            <h2 class="preview-title">An Excerpt from Our Latest Story</h2>
-            <div class="preview-box">
-                <p class="preview-text">"Once upon a time, in a world where words had power beyond measure, a young writer discovered the secret to unlocking the infinite potential within them..."</p>
-            </div>
-            <div class="cta-buttons">
-                <button class="cta-btn">Read More</button>
-                <button class="cta-btn">Explore Our Stories</button>
-            </div>
-        </section>
-
-        <!-- Sections déroulantes -->
-        <section class="page" id="page2">
-            <h2 class="page-title">Page 2</h2>
-            <p class="page-text">Voici une seconde section avec des informations supplémentaires.</p>
-        </section>
-        <section class="page" id="page3">
-            <h2 class="page-title">Page 3</h2>
-            <p class="page-text">Une troisième section pour vos contenus spécifiques.</p>
-        </section>
-        <section class="page" id="page4">
-            <h2 class="page-title">Page 4</h2>
-            <p class="page-text">Et voici une dernière section pour compléter.</p>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Yraeus. All rights reserved.</p>
+        <p>&copy; 2025 Yraeus. All rights reserved. Designed by creative students.</p>
+        <ul class="social-links">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">GitHub</a></li>
+        </ul>
     </footer>
 
-    <!-- Script Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="particles-config.js"></script>
-
-    <!-- JavaScript pour le défilement fluide -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
-    <script>
-    const themeToggle = document.getElementById('theme-toggle');
-
-    // Vérifier le thème préféré de l'utilisateur
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-theme');
-        themeToggle.textContent = '🌞'; // Changer l'icône du bouton pour le mode clair
-    }
-
-    // Action lors du clic sur le bouton
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        if (document.body.classList.contains('dark-theme')) {
-            localStorage.setItem('theme', 'dark');
-            themeToggle.textContent = '🌞'; // Changer l'icône du bouton pour le mode clair
-        } else {
-            localStorage.removeItem('theme');
-            themeToggle.textContent = '🌙'; // Changer l'icône du bouton pour le mode sombre
-        }
-    });
-</script>
-
-    <script src="//code.tidio.co/7q4joutm4rnqixu7d6v8todeecivkuyd.js" async></script>
+    <script src="script.js"></script>
 </body>
 </html>
