@@ -1,381 +1,152 @@
-/* General page style */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
     color: #333;
-
-    /* Dégradé fluide comme fond */
-    background: linear-gradient(-45deg, #6200ea, #3700b3, #000000, #ffffff);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
 }
 
-/* Header style */
-header {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-/* Titre stylé avec animation */
-.title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 10vw;
-    color: #ffffff;
-    animation: shrinkTitle 3s ease-in-out forwards;
-}
-
-/* Animation du titre (rétrécissement) */
-@keyframes shrinkTitle {
-    0% {
-        font-size: 10vw; /* Taille initiale du titre très grand */
-    }
-    100% {
-        font-size: 3vw; /* Taille finale du titre plus petite */
-    }
-}
-
-/* Slogan */
-.slogan {
-    font-style: italic;
-    font-size: 1.5rem;
-    color: #ff4081; /* Couleur rose de base */
-    font-weight: 300;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    animation: gradientColorChange 5s ease-in-out infinite; /* Animation ajoutée */
-}
-
-/* Animation pour le changement de couleur du slogan */
-@keyframes gradientColorChange {
-    0% {
-        color: #ff4081; /* Rose de base */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    }
-    50% {
-        color: #6200ea; /* Violet */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-    100% {
-        color: #ff4081; /* Retour au rose */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    }
-}
-
-/* Main content area */
-main {
-    padding: 20px;
-}
-
-/* Sections déroulantes */
-.page {
-    min-height: 100vh; /* Chaque section occupe la totalité de la hauteur de la fenêtre */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-    background: rgba(55, 0, 179, 1); /* Fond solide pour éviter le conflit */
-    margin: 0;
-    padding: 40px;
-    overflow: hidden; /* Ajouter overflow: hidden pour éviter les débordements */
-}
-
-/* Couleurs alternées pour les pages */
-#page1 {
-    background: rgba(98, 0, 234, 0.9);
-}
-
-#page2 {
-    background: rgba(55, 0, 179, 1); /* Fond solide */
-}
-
-#page3 {
-    background: rgba(0, 0, 0, 0.7);
-}
-
-#page4 {
-    background: linear-gradient(135deg, #1e3a8a, #2563eb); /* Dégradé bleu apaisant */
-    color: #ffffff; /* Texte blanc pour contraster */
-}
-
-/* Footer style */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Menu de navigation */
+/* Navigation Bar */
 .navbar {
-    background-color: #333;
-    text-align: center;
-    padding: 15px 0;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 16px;
+    background-color: #111;
+    color: #fff;
 }
 
-.navbar a:hover {
-    background-color: #6200ea;
+.navbar .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
 }
 
-/* Menu déroulant */
-nav ul {
-    list-style-type: none;
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    position: relative;
-}
-
-nav ul li a {
+.navbar .nav-links a {
     text-decoration: none;
-    padding: 10px;
-    display: block;
-    background-color: #6200ea;
-    color: white;
-    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
 }
 
-nav ul li a:hover {
-    background-color: #3700b3;
-}
-
-/* Style du sous-menu déroulant */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #6200ea;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown-content li a {
-    color: white;
-    padding: 10px;
-}
-
-.dropdown-content li a:hover {
-    background-color: #3700b3;
-}
-
-nav ul li:hover .dropdown-content {
-    display: block;
-}
-
-/* Animation pour le dégradé */
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Particules et formes géométriques */
-.shape {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: rgba(98, 0, 234, 0.3);
-    animation: float 10s infinite ease-in-out;
-    border-radius: 50%;
-    top: calc(100% * var(--random-y));
-    left: calc(100% * var(--random-x));
-    z-index: -1; /* Placer les formes derrière le contenu */
-    pointer-events: none; /* Empêche les formes d'interférer avec les interactions */
-}
-
-/* Animation des formes flottantes */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Effet de survol pour agrandir les sections */
-#page1:hover, #page2:hover, #page3:hover, #page4:hover {
-    transform: scale(1.02); /* Agrandir légèrement */
-    transition: transform 0.3s ease-in-out; /* Transition fluide */
-}
-
-/* Effet de survol pour les titres des sections */
-h2 {
-    transition: color 0.3s, transform 0.3s ease;
-}
-
-/* Lorsque l'utilisateur survole le titre */
-h2:hover {
-    color: #6200ea; /* Changement de couleur du titre */
-    transform: scale(1.1); /* Zoom sur le titre */
-}
-
-/* Effet de survol sur les sections */
-.page {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Lorsque l'utilisateur survole une section */
-.page:hover {
-    transform: scale(1.02); /* Zoom léger sur la section */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet de profondeur */
-}
-
-/* Thème sombre */
-body.dark-theme {
-    background-color: #121212; /* Fond sombre */
-    color: white; /* Texte blanc */
-}
-
-body.dark-theme header {
-    background-color: #333; /* Fond sombre pour l'en-tête */
-}
-
-body.dark-theme .page {
-    background-color: #1e1e1e; /* Fond sombre pour les sections */
-}
-
-/* Bouton de basculement de thème */
-.theme-toggle {
+.navbar .theme-toggle {
     background: none;
     border: none;
-    color: inherit;
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-/* Pour les tablettes et appareils avec une largeur d'écran de 768px ou moins */
-@media (max-width: 768px) {
-    header {
-        padding: 20px 10px;
-    }
-
-    .title {
-        font-size: 7vw; /* Ajuste la taille du titre pour les petits écrans */
-    }
-
-    .slogan {
-        font-size: 14px; /* Réduit la taille du slogan */
-    }
-
-    .shape {
-        width: 50px; /* Réduit la taille des formes flottantes */
-        height: 50px;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    .page {
-        padding: 15px;
-    }
-
-    footer {
-        padding: 5px;
-    }
-
-    /* Adaptation du bouton de thème */
-    .theme-toggle {
-        font-size: 18px; /* Ajuste la taille du bouton pour les petits écrans */
-        top: 10px;
-        right: 10px;
-    }
-
-    /* Carrousel : colonnes pour petits écrans */
-    .carousel {
-        display: block;
-    }
-}
-
-/* Pour les smartphones avec une largeur d'écran de 480px ou moins */
-@media (max-width: 480px) {
-    .title {
-        font-size: 10vw; /* Ajuste encore la taille du titre pour les très petits écrans */
-    }
-
-    .slogan {
-        font-size: 12px; /* Réduit la taille du slogan sur les écrans très petits */
-    }
-
-    .shape {
-        width: 40px; /* Encore plus petit pour les smartphones */
-        height: 40px;
-    }
-
-    .page {
-        padding: 10px;
-    }
-
-    /* Carrousel : une seule colonne pour très petits écrans */
-    .carousel {
-        display: block;
-    }
-}
-
-/* Carrousel : colonnes multiples */
-.carousel {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    overflow-y: auto; /* Permet le défilement */
-    scroll-snap-type: y mandatory; /* Activation du "scroll snap" */
-}
-
-.carousel-item {
-    background-color: #6200ea;
-    padding: 20px;
-    border-radius: 10px;
+    font-size: 1.2rem;
     color: #fff;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    height: 150px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #eceff1, #f5f5f5);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0 0 20px;
+}
+
+.hero-text p {
+    margin: 0 0 20px;
+}
+
+.hero-text .cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Feature Section */
+.feature-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    margin-bottom: 15px;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Highlight Section */
+.highlight {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #fff, #f3f4f6);
+}
+
+.highlight h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.highlight p {
+    margin-bottom: 20px;
+}
+
+.highlight img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
     justify-content: center;
+    gap: 15px;
 }
 
-.carousel-item:hover {
-    background-color: #3700b3;
-}
-
-.carousel::-webkit-scrollbar {
-    width: 8px;
-}
-
-.carousel::-webkit-scrollbar-thumb {
-    background-color: #3700b3;
-    border-radius: 10px;
-}
-
-.carousel::-webkit-scrollbar-track {
-    background: transparent;
+footer .social-links a {
+    text-decoration: none;
+    color: #fff;
 }
